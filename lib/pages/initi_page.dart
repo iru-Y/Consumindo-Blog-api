@@ -15,7 +15,7 @@ class _InitPageState extends State<InitPage> {
       home: SafeArea(
         child: Scaffold(
           appBar: AppBar(
-            title: const Text("Blog blob"),
+            title: const Text("Blog blob", textDirection: TextDirection.ltr,),
           ),
           drawer: Drawer(
             child: Padding(
@@ -30,9 +30,9 @@ class _InitPageState extends State<InitPage> {
                       height: 50,
                       width: double.infinity,
                       child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           const Icon(Icons.post_add),
-                          const SizedBox(width: 15),
                           const Text(
                             "Posts",
                             style: TextStyle(
